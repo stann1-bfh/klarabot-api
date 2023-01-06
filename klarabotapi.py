@@ -26,6 +26,7 @@ class KlarabotAPI(MethodView):
 ##Config API Paths
 api.add_resource(KlarabotAPI, '/klarabotapi')
 
+##Config Default Path to Index-Website
 @app.route('/')
 def index():
     #Define welcoming Page

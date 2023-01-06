@@ -1,0 +1,26 @@
+intents:
+  - book_flight
+  - product_info
+
+entities:
+  - location
+  - product
+
+templates:
+  book_flight:
+  - "I would like to book a flight to {{ location }}."
+  - "Can you help me find a flight to {{ location }}?"
+  - "I need to book a flight for next week to {{ location }}."
+  responses:
+  - "Sure, I can help you book a flight. What city are you flying to?"
+  - "No problem! Let me see what flights are available for you."
+  - "Ok, let's find a flight for you. Where would you like to go?"
+
+  product_info:
+  - "What is the price of the {{ product }}?"
+  - "Can you tell me more about the {{ product }}?"
+  - "I'm interested in the {{ product }}. Do you have any information on it?"
+  responses:
+  - "The {{ product }} has a starting price of $699."
+  - "The {{ product }} starts at $799. It has a triple camera system and a fast processor."
+  - "The {{ product }} starts at $799. It has a 5.7-inch display and a powerful camera."
