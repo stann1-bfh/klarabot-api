@@ -8,6 +8,7 @@ import traceback
 import time
 time.clock = time.time
 
+# Training the Chatterbot with a JSON-Formatted File
 def trainWithJson(path, trainer: ListTrainer):
     with open(path) as training_data:
         try:
@@ -21,10 +22,10 @@ def trainWithJson(path, trainer: ListTrainer):
                         trainer.train([pattern, response])
         except:
             print('Training Data could not be loaded.')
-    
+
+# Training the ChatterBot with a Corpus-Data Formatted file
 def trainWithYaml(path, trainer: ChatterBotCorpusTrainer):
     try:
-        ##training_data = yaml.safe_load(yamlFile)
         trainer.train(path)
     except Exception as exception:
         print('Training Date could not be loaded.')
