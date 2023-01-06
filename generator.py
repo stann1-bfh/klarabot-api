@@ -11,7 +11,6 @@ def extractConversations(data):
     return conversations
 
 # Safe Variations in new  Processed File
-# TODO Saving Logic in YAML File
 def saveToYAMLFile(dataStructure):
     with open("processed_training_data/" + file_name, 'w', encoding='utf-8') as outfile:
         yaml.dump(dataStructure, outfile, default_flow_style=False, allow_unicode=True)
