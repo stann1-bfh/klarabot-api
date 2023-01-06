@@ -1,0 +1,31 @@
+from chatterbot.trainers import ListTrainer, ChatterBotCorpusTrainer
+from chatterbot import ChatBot
+import json, yaml
+import traceback
+
+##Makes the bot work for some reason
+##https://stackoverflow.com/a/69802850
+import time
+time.clock = time.time
+
+def trainWithJson(path, trainer: ListTrainer):
+    with open(path) as training_data:
+        try:
+            data = json.load(training_data)
+            for intent in data:
+                print (f"Intent-Tag: {intent['tag']}")
+                for pattern in intent['patterns']:
+                    for response in intent['responses']:
+                        print ([pattern, response])
+                        ##Effectively Train Data
+                        trainer.train([pattern, response])
+        except:
+            print('Training Data could not be loaded.')
+    
+def trainWithYaml(path, trainer: ChatterBotCorpusTrainer):
+    try:
+        ##training_data = yaml.safe_load(yamlFile)
+        trainer.train(path)
+    except Exception as exception:
+        print('Training Date could not be loaded.')
+        traceback.print_exc()
