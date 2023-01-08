@@ -1,0 +1,41 @@
+[
+    {
+        "tag": "begrüssung",
+        "patterns": [
+            "Sälü", 
+            "Hey", 
+            "Tschou", 
+            "Tschau", 
+            "Grüezi", 
+            "Guete Tag",
+            "Hallo zäme",
+            "Hallo zeme",
+            "Tschau zeme",
+            "tschau zäme",
+            "Tschou zeme",
+            "Tschau zeme",
+            "zeme Hallo",
+            "zäme Hallo",
+            "zeme tschou",
+            "zeme tschau"
+
+        ],
+        "responses": [
+            "Hallo, ich bin Klara, die virtuelle Assistentin dieser Arztpraxis. Wie kann ich dir helfen?"
+        ]
+    },
+    {
+        "tag": "goodbye",
+        "patterns": [
+            "cya", 
+            "bye", 
+            "bye bye", 
+            "Ade", 
+            "Ade zeme", 
+            "Hiube"
+        ],
+        "responses": [
+            "Auf wiedersehen!"
+        ]
+    }
+]

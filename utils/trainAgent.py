@@ -10,14 +10,13 @@ time.clock = time.time
 
 # Training the Chatterbot with a JSON-Formatted File
 def trainWithJson(path, trainer: ListTrainer):
-    with open(path) as training_data:
+    with open(path, encoding="utf-8") as training_data:
         try:
             data = json.load(training_data)
             for intent in data:
                 print (f"Intent-Tag: {intent['tag']}")
                 for pattern in intent['patterns']:
                     for response in intent['responses']:
-                        print ([pattern, response])
                         ##Effectively Train Data
                         trainer.train([pattern, response])
         except:

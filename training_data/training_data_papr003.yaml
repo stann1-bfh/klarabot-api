@@ -1,0 +1,11 @@
+categories:
+- terminauskunft
+conversations:
+- - Wann habe ich meinen nächsten Termin?
+  - $papr003
+- - Um welche Uhrzeit findet mein Termin statt?
+  - $papr003
+- - Können Sie mir sagen wann mein nächster Termin ist?
+  - $papr003
+- - Kannst du mir sagen wann mein nächster Termin ist?
+  - $papr003
