@@ -15,7 +15,8 @@ CORS(app)
 ##https://stackoverflow.com/a/69802850
 time.clock = time.time
 initChatBot("Klarabot")
-chatbot = getChatBot("Klarabot") 
+chatbot = getChatBot("Klarabot")
+print(chatbot.logic_adapters)
 
 class KlarabotAPI(MethodView):
     def get(self):
